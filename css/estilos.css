@@ -1,0 +1,72 @@
+.main-principal {
+    background: url('/img/funda3.jpg') ;
+    background-size: cover; /* Ajusta la imagen para que cubra todo el elemento main */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el elemento main */
+    height: 84vh;
+}
+
+    .h1-main-principal{
+        color: white;
+        font-size: 40px;
+        text-shadow: 5px 5px 1px rgba(7, 0, 0, 0.5);
+        padding: 15%;
+        text-align: center;
+    }
+
+    .h1-main-principal span{
+        color: rgb(255, 123, 0);
+    }
+
+
+
+
+/*ASIDE*/
+
+.section-main-principal-contenedor{
+    /* background-color: aqua; */
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+
+    .cuadrado{
+        background-color: #34AD54;
+        width: 50%;
+        height: auto;
+        margin: 10px;
+        box-shadow: 0px 0px 10px orange;
+        transition: transform 0.3s ease;
+    }
+
+    .cuadrado:hover{
+        transform: translateY(-5px);
+    }
+    .cuadrado p{
+        text-align: justify;
+        margin: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 1px rgba(7, 0, 0, 0.5);
+    }
+
+    .img-cuadrado{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+        /* border-radius: 20px; */
+        box-shadow: 0px 0px 10px #000;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .section-main-principal-contenedor {
+            flex-wrap: wrap;
+        }
+    
+        .cuadrado {
+            width: 90%; /* Ajusta el ancho para que ocupe el 90% del contenedor en pantallas pequeñas */
+        }
+    }
