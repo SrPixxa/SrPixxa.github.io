@@ -1,8 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+
 .main-father{
     /* background-color: aqua; */
     position: relative;
-    /* height: 100vh; */
-    width: 100%;
+    /* height: 100vh;
+    width: 100%; */
 }
 
 .overlay-text {
@@ -28,16 +35,14 @@
 
 
     .main-father-img{
-         
         width:100%;
         height: 70vh; /* Altura completa de la ventana */
         background-image: url('/img/girlthinking.jpeg'); /* Reemplaza con la ruta de tu imagen */
         background-repeat: no-repeat; /* Evita que la imagen se repita */
-       
+        
         background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-        object-fit: cover; 
+        object-fit: cover;  
     }
-
 
 
 
