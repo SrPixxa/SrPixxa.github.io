@@ -11,6 +11,13 @@
 }
 
 
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+
 .main-father{
     /* background-color: aqua; */
     position: relative;
@@ -49,3 +56,95 @@
         background-size: cover; /* Hace que la imagen cubra todo el contenedor */
         object-fit: cover;  
     }
+
+
+/* ASIDE */
+
+.aside{
+}
+
+
+    .container-mayor{
+        
+    }
+        .container-mayor-section{
+            /* background-color: #f0f0f069; */
+            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 40px;
+            margin: 10px;
+        }
+
+
+            .container-mayor-section-div{
+                /* background-color: #f0f0f0; */
+                width: 100%;
+                padding:30px;
+                box-sizing: border-box;
+                
+            }
+
+            .container-mayor-section-div p{
+                font-size: 20px;
+                text-align: justify;
+            }
+
+            /* .container-mayor-section-div, 
+            .container-mayor-section-div img{
+                display: flex;
+                justify-content: center;
+            } */
+            .container-mayor-section-div img{
+                display: block; /* Asegura que la imagen no tenga margen extra alrededor */
+                margin: auto; /* Centra la imagen dentro del contenedor */
+                width: 300px;
+                border-radius: 20px;
+                box-shadow: 1px 5px 10px 1px rgb(15, 0, 0);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @media (max-width: 768px) {
+                .container-mayor-section {
+                    grid-template-columns: 1fr; /* Cambia a una columna en pantallas más pequeñas */
+                    padding: 10px;
+                }
+            
+                .container-mayor-section-div {
+                    padding: 10px;
+                }
+            
+                /* .container-mayor-section-div p {
+                    font-size: 14px; /* Reduce el tamaño del texto en pantallas más pequeñas */
+                } */
+            }
+            
+            @media (max-width: 480px) {
+                .container-mayor-section-div {
+                    padding: 5px;
+                }
+            
+                /* .container-mayor-section-div p {
+                    font-size: 12px; /* Ajuste adicional para pantallas muy pequeñas */
+                } */
+            }
