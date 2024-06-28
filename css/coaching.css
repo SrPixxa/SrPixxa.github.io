@@ -93,7 +93,9 @@
 
 
     .aside-div-container-dos{
-        background-color: #E7B184D6;
+        /* background-color: #E7B184D6; */
+        background-color: #d3d3d37c;
+        /* background: rgb(245,151,148); */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -157,7 +159,7 @@
 
             .aside-div-container-tres-section-div ul{
                 margin: 30px;
-                list-style-type:upper-latin;
+                list-style-type:circle;
             }
     
             .aside-div-container-tres-section-div .image-container {
@@ -198,10 +200,12 @@
             @media (max-width: 1024px) {
                 .aside-div-container-tres {
                     grid-template-columns: 1fr;
+                    
                 }
     
                 .aside-div-container-tres-section-div {
                     width: 80%;
+                    
                 }
             }
     

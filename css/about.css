@@ -61,91 +61,99 @@
 /* ASIDE */
 
 .aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px; */
+    /* background-color: rgba(250, 250, 250, 0.616); */
+    background-color: #f7f5f5;
+    /* border: 1px solid; */
+    
 }
 
 
     .container-mayor{
-        /* background-color: #f5f5f5; */
-        margin: 20px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch; /* Asegura que todas las secciones tengan la misma altura */
+        width: 100%;
+        max-width: 1200px; /* Ajusta según sea necesario */
+        padding: 20px;
+        box-sizing: border-box; /* Incluye el padding en el ancho total */
     }
         .container-mayor-section{
-            
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            background-color: white; /* Añadir fondo blanco para cada sección */
+            border: 1px solid #ccc; /* Borde gris claro */
+            padding: 10px;
+            box-shadow: 3px 4px 12px 1px rgb(182, 181, 181); /* Sombra sutil para un look profesional */
             margin: 10px;
-            
+            box-sizing: border-box; /* Incluye el padding en el width total */
+            background-color: rgb(245, 245, 245);
         }
 
 
             .container-mayor-section-div{
-                /* background-color: #f0f0f0; */
-                width: 100%;
-                padding:30px;
-                box-sizing: border-box;
-                box-shadow: 1px 1px 10px 4px #c7c6c6;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 10px;
             }
 
             .container-mayor-section-div p{
-                font-size: 20px;
                 text-align: justify;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
 
-            /* .container-mayor-section-div, 
+          
             .container-mayor-section-div img{
-                display: flex;
-                justify-content: center;
-            } */
-            .container-mayor-section-div img{
-                display: block; /* Asegura que la imagen no tenga margen extra alrededor */
-                margin: auto; /* Centra la imagen dentro del contenedor */
-                width: 300px;
-                border-radius: 20px;
-                box-shadow: 1px 5px 10px 1px rgb(15, 0, 0);
+                width: 100%;
+                max-width: 300px; /* Ajusta el tamaño máximo según sea necesario */
+                height: auto; /* Mantiene la proporción de la imagen */
+                max-height: 300px; /* Ajusta la altura máxima según sea necesario */
+                object-fit: cover; /* Asegura que la imagen llene el área asignada */
+                border-radius: 10px; /* Bordes redondeados para las imágenes */
+                box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.904); /* Sombra para las imágenes */
+                
             }
 
 
+         
 
 
 
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-mayor {
+        flex-direction: column;
+        padding: 10px;
+    }
 
+    .container-mayor-section {
+        width: 100%;
+        margin: 10px 0;
+    }
 
+    .gallery img {
+        width: 100%; /* Las imágenes ocuparán el 100% del contenedor en pantallas pequeñas */
+        margin-bottom: 10px; /* Añade espacio entre las imágenes en pantallas pequeñas */
+    }
+}
 
+/* Media queries para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-mayor-section {
+        width: 45%; /* Las secciones ocuparán el 45% del contenedor en pantallas medianas */
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-            @media (max-width: 768px) {
-                .container-mayor-section {
-                    grid-template-columns: 1fr; /* Cambia a una columna en pantallas más pequeñas */
-                    padding: 10px;
-                }
-            
-                .container-mayor-section-div {
-                    padding: 10px;
-                }
-            
-                /* .container-mayor-section-div p {
-                    font-size: 14px; /* Reduce el tamaño del texto en pantallas más pequeñas */
-                /* } */
-            }
-            
-            @media (max-width: 480px) {
-                .container-mayor-section-div {
-                    padding: 5px;
-                }
-            
-                /* .container-mayor-section-div p {
-                    font-size: 12px; /* Ajuste adicional para pantallas muy pequeñas */
-                /* }  */
-            }
+    .gallery img {
+        width: 45%; /* Las imágenes ocuparán el 45% del contenedor en pantallas medianas */
+    }
+}
